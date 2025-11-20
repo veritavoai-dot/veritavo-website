@@ -1,6 +1,6 @@
 
 import { NextRequest, NextResponse } from 'next/server'
-import { prisma } from '@/lib/db'
+import { getPrisma } from '@/lib/db'
 
 export const dynamic = "force-dynamic"
 
@@ -17,7 +17,8 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // Save to database
+    // Save to database (lazy-load Prisma at request time)
+    const prisma = await getPrisma()
     const submission = await prisma.contactSubmission.create({
       data: {
         name,
