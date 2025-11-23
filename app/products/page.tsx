@@ -5,13 +5,8 @@ import Header from '@/components/header'
 import Footer from '@/components/footer'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { CheckCircle, ArrowRight, HelpCircle } from 'lucide-react'
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from '@/components/ui/tooltip'
+import { CheckCircle, ArrowRight } from 'lucide-react'
+import MobileTooltip from '@/components/mobile-tooltip'
 
 export const metadata = {
   title: 'Veritavo Growth Engine | Digital Product',
@@ -65,7 +60,7 @@ export default function ProductsPage() {
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           
-          <TooltipProvider>
+          
             <Card className="border-2 border-blue-600 shadow-xl">
               <CardHeader className="text-center pb-6 bg-gradient-to-br from-blue-50 to-purple-50">
                 <div className="relative h-32 w-32 mx-auto mb-6">
@@ -110,18 +105,7 @@ export default function ProductsPage() {
                 <div className="text-center">
                   <div className="inline-flex items-center gap-2">
                     <span className="text-sm font-semibold text-gray-900">14-Day Free Trial</span>
-                    <Tooltip>
-                      <TooltipTrigger asChild>
-                        <button className="text-blue-600 hover:text-blue-700">
-                          <HelpCircle className="h-4 w-4" />
-                        </button>
-                      </TooltipTrigger>
-                      <TooltipContent className="bg-white border-blue-200 shadow-lg max-w-xs">
-                        <p className="text-sm text-gray-700">
-                          Access the full system, funnels, workflows, and dashboard. Nothing is connected, branded, or activated until the setup fee is paid.
-                        </p>
-                      </TooltipContent>
-                    </Tooltip>
+                    <MobileTooltip content="Access the full system, funnels, workflows, and dashboard. Nothing is connected, branded, or activated until the setup fee is paid." />
                   </div>
                 </div>
 
@@ -135,18 +119,7 @@ export default function ProductsPage() {
                       <div className="flex items-center gap-2">
                         <span className="text-gray-900 font-medium">£3,000</span>
                         <span className="text-gray-600">• One time setup fee</span>
-                        <Tooltip>
-                          <TooltipTrigger asChild>
-                            <button className="text-blue-600 hover:text-blue-700">
-                              <HelpCircle className="h-4 w-4" />
-                            </button>
-                          </TooltipTrigger>
-                          <TooltipContent className="bg-white border-blue-200 shadow-lg max-w-xs">
-                            <p className="text-sm text-gray-700">
-                              This covers full installation, branding, integrations, domain setup, calendar connection, email setup, and activation.
-                            </p>
-                          </TooltipContent>
-                        </Tooltip>
+                        <MobileTooltip content="This covers full installation, branding, integrations, domain setup, calendar connection, email setup, and activation." />
                       </div>
                     </div>
 
@@ -155,18 +128,7 @@ export default function ProductsPage() {
                       <div className="flex items-center gap-2">
                         <span className="text-gray-900 font-medium">£997/month</span>
                         <span className="text-gray-600">• Monthly subscription</span>
-                        <Tooltip>
-                          <TooltipTrigger asChild>
-                            <button className="text-blue-600 hover:text-blue-700">
-                              <HelpCircle className="h-4 w-4" />
-                            </button>
-                          </TooltipTrigger>
-                          <TooltipContent className="bg-white border-blue-200 shadow-lg max-w-xs">
-                            <p className="text-sm text-gray-700">
-                              This includes system updates, maintenance, and access to all automations and improvements.
-                            </p>
-                          </TooltipContent>
-                        </Tooltip>
+                        <MobileTooltip content="This includes system updates, maintenance, and access to all automations and improvements." />
                       </div>
                     </div>
 
@@ -177,18 +139,7 @@ export default function ProductsPage() {
                           <div className="flex items-center gap-2">
                             <span className="text-gray-900 font-medium">£9,600</span>
                             <span className="text-gray-600">• Annual plan</span>
-                            <Tooltip>
-                              <TooltipTrigger asChild>
-                                <button className="text-blue-600 hover:text-blue-700">
-                                  <HelpCircle className="h-4 w-4" />
-                                </button>
-                              </TooltipTrigger>
-                              <TooltipContent className="bg-white border-blue-200 shadow-lg max-w-xs">
-                                <p className="text-sm text-gray-700">
-                                  Pay once for 12 months and reduce your cost to £800/month. Saves £1,364 compared to monthly billing.
-                                </p>
-                              </TooltipContent>
-                            </Tooltip>
+                            <MobileTooltip content="Pay once for 12 months and reduce your cost to £800/month. Saves £1,364 compared to monthly billing." />
                           </div>
                           <p className="text-xs text-gray-600 mt-1">Equivalent to £800/month, save £1,364</p>
                         </div>
@@ -245,7 +196,7 @@ export default function ProductsPage() {
                 </div>
               </CardContent>
             </Card>
-          </TooltipProvider>
+          
 
         </div>
       </section>

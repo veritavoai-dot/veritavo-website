@@ -5,13 +5,8 @@ import Link from 'next/link'
 import Header from '@/components/header'
 import Footer from '@/components/footer'
 import { Button } from '@/components/ui/button'
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from '@/components/ui/tooltip'
-import { CheckCircle, ArrowRight, Zap, Info } from 'lucide-react'
+import { CheckCircle, ArrowRight, Zap } from 'lucide-react'
+import MobileTooltip from '@/components/mobile-tooltip'
 
 export default function ServicesPage() {
   const [billingPeriod, setBillingPeriod] = useState<'monthly' | 'annual'>('monthly')
@@ -51,100 +46,43 @@ export default function ServicesPage() {
               What's Included
             </h2>
             
-            <TooltipProvider>
-              <div className="space-y-4 mb-12">
+            <div className="space-y-4 mb-12">
                 <div className="flex items-start gap-4">
                   <CheckCircle className="h-6 w-6 text-green-500 flex-shrink-0 mt-1" />
                   <div className="flex items-center gap-2">
                     <span className="text-lg text-gray-700">Custom lead-generation website</span>
-                    <Tooltip>
-                      <TooltipTrigger asChild>
-                        <button className="inline-flex items-center justify-center">
-                          <Info className="h-5 w-5 text-blue-600 hover:text-blue-700 cursor-pointer" />
-                        </button>
-                      </TooltipTrigger>
-                      <TooltipContent className="max-w-xs p-4 bg-white border-2 border-blue-200 shadow-lg">
-                        <p className="text-sm text-gray-700">
-                          <strong className="text-blue-600">Custom Website</strong> means we build a professional website designed specifically for your business. It's created to attract visitors and turn them into clients by making it easy for people to contact you, book appointments, or request your services—all without you needing any technical skills.
-                        </p>
-                      </TooltipContent>
-                    </Tooltip>
+                    <MobileTooltip content="Custom Website means we build a professional website designed specifically for your business. It's created to attract visitors and turn them into clients by making it easy for people to contact you, book appointments, or request your services—all without you needing any technical skills." />
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
                   <CheckCircle className="h-6 w-6 text-green-500 flex-shrink-0 mt-1" />
                   <div className="flex items-center gap-2">
                     <span className="text-lg text-gray-700">AI chatbot that replies 24/7</span>
-                    <Tooltip>
-                      <TooltipTrigger asChild>
-                        <button className="inline-flex items-center justify-center">
-                          <Info className="h-5 w-5 text-blue-600 hover:text-blue-700 cursor-pointer" />
-                        </button>
-                      </TooltipTrigger>
-                      <TooltipContent className="max-w-xs p-4 bg-white border-2 border-blue-200 shadow-lg">
-                        <p className="text-sm text-gray-700">
-                          <strong className="text-blue-600">AI Chatbot</strong> is like having a virtual assistant on your website that never sleeps. It automatically answers visitor questions, provides information about your services, and captures contact details—even when you're busy or outside business hours. It's powered by artificial intelligence to give helpful, natural responses.
-                        </p>
-                      </TooltipContent>
-                    </Tooltip>
+                    <MobileTooltip content="AI Chatbot is like having a virtual assistant on your website that never sleeps. It automatically answers visitor questions, provides information about your services, and captures contact details—even when you're busy or outside business hours. It's powered by artificial intelligence to give helpful, natural responses." />
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
                   <CheckCircle className="h-6 w-6 text-green-500 flex-shrink-0 mt-1" />
                   <div className="flex items-center gap-2">
                     <span className="text-lg text-gray-700">Google, Facebook, YouTube ads</span>
-                    <Tooltip>
-                      <TooltipTrigger asChild>
-                        <button className="inline-flex items-center justify-center">
-                          <Info className="h-5 w-5 text-blue-600 hover:text-blue-700 cursor-pointer" />
-                        </button>
-                      </TooltipTrigger>
-                      <TooltipContent className="max-w-xs p-4 bg-white border-2 border-blue-200 shadow-lg">
-                        <p className="text-sm text-gray-700">
-                          <strong className="text-blue-600">Online Advertising</strong> means we create and run ads for your business on Google (when people search for your services), Facebook (in people's news feeds), and YouTube (before or during videos). These ads help more potential clients discover your business and bring qualified leads directly to you.
-                        </p>
-                      </TooltipContent>
-                    </Tooltip>
+                    <MobileTooltip content="Online Advertising means we create and run ads for your business on Google (when people search for your services), Facebook (in people's news feeds), and YouTube (before or during videos). These ads help more potential clients discover your business and bring qualified leads directly to you." />
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
                   <CheckCircle className="h-6 w-6 text-green-500 flex-shrink-0 mt-1" />
                   <div className="flex items-center gap-2">
                     <span className="text-lg text-gray-700">SEO setup and ranking</span>
-                    <Tooltip>
-                      <TooltipTrigger asChild>
-                        <button className="inline-flex items-center justify-center">
-                          <Info className="h-5 w-5 text-blue-600 hover:text-blue-700 cursor-pointer" />
-                        </button>
-                      </TooltipTrigger>
-                      <TooltipContent className="max-w-xs p-4 bg-white border-2 border-blue-200 shadow-lg">
-                        <p className="text-sm text-gray-700">
-                          <strong className="text-blue-600">SEO (Search Engine Optimization)</strong> helps your website appear higher in Google search results. When potential clients search for services like yours, they'll find your business first—bringing you more organic traffic and qualified leads without paying for ads.
-                        </p>
-                      </TooltipContent>
-                    </Tooltip>
+                    <MobileTooltip content="SEO (Search Engine Optimization) helps your website appear higher in Google search results. When potential clients search for services like yours, they'll find your business first—bringing you more organic traffic and qualified leads without paying for ads." />
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
                   <CheckCircle className="h-6 w-6 text-green-500 flex-shrink-0 mt-1" />
                   <div className="flex items-center gap-2">
                     <span className="text-lg text-gray-700">AI generated automated email and WhatsApp followups</span>
-                    <Tooltip>
-                      <TooltipTrigger asChild>
-                        <button className="inline-flex items-center justify-center">
-                          <Info className="h-5 w-5 text-blue-600 hover:text-blue-700 cursor-pointer" />
-                        </button>
-                      </TooltipTrigger>
-                      <TooltipContent className="max-w-xs p-4 bg-white border-2 border-blue-200 shadow-lg">
-                        <p className="text-sm text-gray-700">
-                          <strong className="text-blue-600">Automated Followups</strong> means our AI system automatically sends personalized emails and WhatsApp messages to your leads at the right time. It keeps your potential clients engaged without you having to remember to follow up manually, saving you time and ensuring no opportunity is missed.
-                        </p>
-                      </TooltipContent>
-                    </Tooltip>
+                    <MobileTooltip content="Automated Followups means our AI system automatically sends personalized emails and WhatsApp messages to your leads at the right time. It keeps your potential clients engaged without you having to remember to follow up manually, saving you time and ensuring no opportunity is missed." />
                   </div>
                 </div>
               </div>
-            </TooltipProvider>
 
             {/* Pricing */}
             <div className="bg-blue-50 rounded-xl p-8 mb-8 border-2 border-blue-200">
