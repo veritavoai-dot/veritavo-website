@@ -100,7 +100,7 @@ const Footer = () => {
             <h3 className="font-semibold mb-4">Contact Us</h3>
             <ul className="space-y-3 text-sm">
               <li>
-                <a href="mailto:info@veritavo.ai" className="text-gray-300 hover:text-white transition-colors block">
+                <a href="mailto:support@veritavo.com" className="text-gray-300 hover:text-white transition-colors block">
                   support@veritavo.com
                 </a>
               </li>
