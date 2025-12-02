@@ -12,7 +12,7 @@ export default function ContactPage() {
       title: 'Email Us',
       details: 'support@veritavo.com',
       description: 'Get in touch for any questions or support needs',
-      link: 'mailto:support@veritavo.com'
+      link: 'mailto:support@veritavo.com '
     },
     {
       icon: <Phone className="h-6 w-6 text-blue-600" />,
