@@ -101,7 +101,7 @@ const Footer = () => {
             <ul className="space-y-3 text-sm">
               <li>
                 <a href="mailto:info@veritavo.ai" className="text-gray-300 hover:text-white transition-colors block">
-                  info@veritavo.ai
+                  support@veritavo.com
                 </a>
               </li>
               <li>
