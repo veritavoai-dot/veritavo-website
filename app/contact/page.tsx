@@ -10,9 +10,9 @@ export default function ContactPage() {
     {
       icon: <Mail className="h-6 w-6 text-blue-600" />,
       title: 'Email Us',
-      details: 'info@veritavo.ai',
+      details: 'support@veritavo.com',
       description: 'Get in touch for any questions or support needs',
-      link: 'mailto:info@veritavo.ai'
+      link: 'mailto:support@veritavo.com'
     },
     {
       icon: <Phone className="h-6 w-6 text-blue-600" />,
